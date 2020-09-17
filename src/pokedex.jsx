@@ -1,7 +1,7 @@
 import React from "react";
-import Pokecard from './Pokecard';
+import Pokecard from "./Pokecard";
 
-class Pokedex extends Component {
+class Pokedex extends React.Component {
   static defaultProps = {
     pokemon: [
       { id: 4, name: "Charmander", type: "fire", base_experience: 62 },
@@ -16,11 +16,19 @@ class Pokedex extends Component {
   };
 
   render() {
-      return (
-          <div>
-              
-          </div>
-      )
+    return (
+      <div>
+        <h1>Pokedex!</h1>
+        {this.props.pokemon.map((p) => (
+          <Pokecard
+            id={p.id}
+            name={p.name}
+            type={p.type}
+            exp={p.base_experience}
+          ></Pokecard>
+        ))}
+      </div>
+    );
   }
 }
 
