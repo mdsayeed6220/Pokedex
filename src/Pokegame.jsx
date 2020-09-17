@@ -23,8 +23,8 @@ class Pokegame extends Component {
       player1.push(randPoke);
     }
 
-    console.log(player1);
-    console.log(player2);
+    console.log(player1);//cross checl random array
+    console.log(player2);//cross check random array
     let exp1 = player1.reduce(
       (exp, pokemon) => exp + pokemon.base_experience,
       0
