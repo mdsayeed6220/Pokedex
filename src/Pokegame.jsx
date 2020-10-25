@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Pokedex from "./Pokedex";
+import Pokedex from './pokedex'
 class Pokegame extends Component {
   static defaultProps = {
     pokemon: [
